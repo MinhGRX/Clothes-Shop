@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./login.component.scss">
+</head>
+
+
+<body>
+    <div class="background">
+        <div class="outerbox">
+            <div class="innerbox">
+                <div class="loginbox">
+                    <div class="form-container">                        
+                        <div class="form-field">
+
+                            <h1> Sign In </h1>
+                            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                                <div class="username">
+                                    <span class="p-float-label">
+                                        <input pInputText id="username" [formControlName]="'username'"/>
+                                        <label for="username">Username</label>
+                                    </span>
+                                </div>
+                            
+                                <div class="password">
+                                    <span class="p-float-label">
+                                        <p-password [formControlName]="'password'"></p-password>
+                                        <label for="password">Password</label>
+                                    </span>
+                                </div>
+
+                                <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me"></p-checkbox>
+                                <br>
+                                <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Login</button>
+                            </form>
+
+                            <div class ="signup">
+                                <a href="/signup"> Didn't have an account? Sign Up </a>
+                            </div>
+                        </div>
+
+                        <p-image class="image" src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg" alt="Image" width="450"/>
+                        
+                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

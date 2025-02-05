@@ -1,0 +1,57 @@
+.checkout-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-height: 100vh; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-left: 220px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+
+    &:disabled {
+      background-color: #ddd; 
+      cursor: not-allowed; 
+    }
+
+    &.btn-success {
+      background-color: #2a9d8f; 
+      border: none;
+      color: white;
+    }
+
+    &.btn:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  

@@ -1,0 +1,103 @@
+.orders-container {
+    max-height: 80vh; /* Adjust the height as needed */
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ffffff;
+}
+  
+.product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.product-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+  
+.product-info p {
+    margin: 0;
+}
+  
+.remove-icon {
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px;
+}
+  
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+  
+.quantity-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.quantity-controls button:disabled {
+    background-color: #ccc;
+}
+
+.quantity-controls span {
+    font-size: 16px;
+}
+
+.discount {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.discount label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.discount select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.total-price {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.continue-shopping-button, .checkout-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+  
+.continue-shopping-button:hover, .checkout-button:hover {
+    background-color: #0056b3;
+}

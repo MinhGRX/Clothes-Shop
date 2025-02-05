@@ -1,0 +1,9 @@
+<div class="size-picker clearfix">
+    <div
+      class="size-field"
+      [ngClass]="{'selected': selectedSize === size }"
+      *ngFor="let size of sizes"
+      (click)="onSizeChange(size)">
+      {{ size }}
+    </div>
+  </div>

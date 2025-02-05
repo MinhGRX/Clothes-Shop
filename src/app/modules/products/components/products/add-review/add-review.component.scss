@@ -1,0 +1,77 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    
+    .review {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align review content to the left */
+        margin-bottom: 15px; /* Space between multiple reviews */
+        padding: 10px;
+        border: 1px solid #ccc; /* Light border around reviews */
+        border-radius: 4px; /* Rounded corners */
+        background-color: #f9f9f9; /* Light background color */
+        
+        h5 {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 5px; /* Space between name and content */
+        }
+      
+        p {
+          font-size: 14px;
+          color: #555;
+          margin: 0; /* Remove default margin */
+        }
+      }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px; 
+      
+      label {
+        font-size: 16px;
+        margin-bottom: 5px; 
+      }
+  
+      .form-control {
+        width: 100%; 
+        padding: 10px; 
+        font-size: 14px; 
+        border-radius: 4px; 
+        border: 1px solid #ccc; 
+        
+        &:focus {
+          border-color: #2a9d8f; 
+          outline: none; 
+        }
+      }
+    }
+    
+    button {
+      align-self: flex-start; 
+      padding: 10px 20px; 
+      font-size: 16px; 
+      border-radius: 4px; 
+      cursor: pointer;
+      
+      &:disabled {
+        background-color: #ddd; 
+        cursor: not-allowed; 
+      }
+  
+      &.btn-success {
+        background-color: #2a9d8f; 
+        border: none;
+        color: white;
+        
+        &:hover {
+          background-color: #1f7f71; 
+        }
+      }
+    }
+  }
+  
+  

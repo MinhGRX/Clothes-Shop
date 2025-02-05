@@ -1,0 +1,15 @@
+.color-picker:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; position: relative; top: -30px; }
+
+.color-field {
+  display: block;
+  width: 34px;
+  height: 34px;
+  float: left;
+  margin-right: 10px;
+  border: 2px rgba(255, 255, 255, 0.404) solid;
+  border-radius: 50%;
+}
+
+.color-field.selected {
+  border: 2px rgba(0, 0, 0, 0.082) solid;
+}

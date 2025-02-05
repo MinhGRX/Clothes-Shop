@@ -1,0 +1,22 @@
+.cart-button {
+    background-color: #28a745; /* Green color for the button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #218838; /* Darker green on hover */
+    }
+  }
+  
+  .remove-icon {
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  

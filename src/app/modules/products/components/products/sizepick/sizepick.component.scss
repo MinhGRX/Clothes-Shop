@@ -1,0 +1,19 @@
+.size-picker:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; position: relative; top: -30px; }
+
+.size-field {
+  color: #bdbdbd;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding-top: 9px;
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+  border: 1px #bdbdbd solid;
+  background-color: #fff;
+}
+
+.size-field.selected {
+  border: 2px #828282 solid;
+  background-color: #fff;
+}

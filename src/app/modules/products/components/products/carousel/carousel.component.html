@@ -1,0 +1,1 @@
+<img *ngIf="(product$ | async) && (variant$ | async) !== null && (variant$ | async) !== undefined" [src]="(product$ | async)?.variants?.[(variant$ | async) ?? 0]?.image" alt="{{ (product$ | async)?.name }}" class="image-responsive" style="max-height: 450px">

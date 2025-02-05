@@ -1,0 +1,58 @@
+<div class="checkout-container">
+    <h2>Checkout</h2>
+    <div class="checkout-content">
+      <div class="cart-items">
+        <h3>Items</h3>
+        <div *ngFor="let product of cartItems" class="cart-item">
+          <img [src]="product.variants[0].image" alt="{{ product.name }}" class="cart-item-image">
+          <div class="cart-item-details">
+            <p>{{ product.name }}</p>
+            <p>Price: ${{ product.price }}</p>
+            <p>Quantity: {{ product.quantity }}</p>
+          </div>
+        </div>
+        <div class="total-price">
+          <strong>Total Price: ${{ totalWithoutDiscount | number: '1.2-2' }}</strong>
+        </div>
+        <div class="discount">
+          <strong>Discount: {{ discount }}%</strong>
+        </div>
+        <div class="final-price">
+          <strong>Final Price: ${{ totalPrice | number:'1.2-2' }}</strong>
+        </div>
+      </div>
+      <div class="payment-method">
+        <h3>Payment Method</h3>
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" formControlName="paymentMethod" class="form-control" required>
+              <option value="creditCard">Credit Card</option>
+              <option value="bankTransfer">Bank Transfer</option>
+            </select>
+          </div>
+  
+          <div *ngIf="checkoutForm.get('paymentMethod')?.value === 'creditCard'">
+            <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <input id="cardNumber" [formControlName]="'cardNumber'" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="expirationDate">Expiration Date</label>
+              <input id="expirationDate" [formControlName]="'expirationDate'" type="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="cvv">Full Name</label>
+              <input id="cvv" [formControlName]="'cvv'" type="text" class="form-control" required>
+            </div>
+          </div>
+  
+          <div *ngIf="checkoutForm.get('paymentMethod')?.value === 'bankTransfer'" class="qr-code">
+            <img src='assets/images/QR.png' alt="QR Code for Bank Transfer">
+          </div>
+  
+          <button type="submit" class="btn btn-primary" [disabled]="!checkoutForm.valid">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>

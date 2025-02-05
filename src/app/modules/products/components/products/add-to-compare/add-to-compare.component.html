@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-6">
+      <button class="btn compare-button" type="button" (click)="onAddToCompare()">Add to compare</button>
+    </div>
+    <div class="col-md-6">
+      <p *ngFor="let product of (compare$ | async)">{{ product.name }} 
+        <a (click)="onRemoveFromCompare(product.id)" class="remove-icon">
+          x
+        </a>
+      </p>
+    </div>
+  </div>

@@ -1,0 +1,53 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-7 center">
+        <app-carousel></app-carousel>
+      </div>
+      <div class="col-md-5">
+        <div class="product-info" *ngIf="product$ | async as product">
+          <h1>{{ product.name }}</h1>
+          <h3>${{ product.price }}</h3>
+          <h4 *ngIf="variant$ | async as variant">{{ product.variants[variant].code }}</h4>
+          <p>{{ product.description }}</p>
+        </div>
+        <hr>
+        <div class="row">
+          <p><app-colorpick></app-colorpick></p>
+        </div>
+        <hr>
+        <div class="row">
+          <p><app-sizepick></app-sizepick></p>
+        </div>
+        <hr>
+        <div class="row">
+          <p><app-add-to-cart></app-add-to-cart></p>
+        </div>
+        <div class="row">
+          <p><app-add-to-favorite></app-add-to-favorite></p>
+        </div>
+        <div class="row">
+          <p><app-add-to-compare></app-add-to-compare></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <app-details></app-details>
+  </div>
+</div>
+
+
+<div class="reviews-panel">
+  <div class="panel-bottom">
+    <div class="row1">
+      <div class="col-md-6">
+        <app-reviews></app-reviews>
+      </div>
+      <div class="col-md-6">
+        <app-add-review></app-add-review>
+      </div>
+    </div>
+  </div>
+</div>

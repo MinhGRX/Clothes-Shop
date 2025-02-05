@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn cart-button" type="button" (click)="onAddToCart()">Add to cart</button>
+  </div>
+  <div class="col-md-6">
+    <p *ngFor="let product of (cart$ | async)">{{ product.name }} - ${{ product.price }} 
+      <a (click)="onRemoveFromCart(product.id)" class="remove-icon">
+        x
+      </a>
+    </p>
+  </div>
+</div>

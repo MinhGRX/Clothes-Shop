@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-6">
+      <button class="btn favor-button" type="button" (click)="onAddToFavorite()">Add to favorite</button>
+    </div>
+    <div class="col-md-6">
+      <p *ngFor="let product of (favorite$ | async)">{{ product.name }} 
+        <a (click)="onRemoveFromFavorite(product.id)" class="remove-icon">
+          x
+        </a>
+      </p>
+    </div>
+  </div>
